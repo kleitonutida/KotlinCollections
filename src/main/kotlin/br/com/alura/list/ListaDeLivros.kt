@@ -42,25 +42,25 @@ fun main() {
     livros.remove(livro3)
     livros.imprimeComMarcadores()
 
-    val ordenadoPorPublicacao: List<Livro> = livros.sorted()
+    val ordenadoPorPublicacao: List<Livro> = listaDeLivros.sorted()
     ordenadoPorPublicacao.imprimeComMarcadores()
 
-    val ordenadoPorTitulo: List<Livro> = livros.sortedBy { it.titulo }
+    val ordenadoPorTitulo: List<Livro> = listaDeLivros.sortedBy { it.titulo }
     ordenadoPorTitulo.imprimeComMarcadores()
 
-    livros.sortedBy { it.autor }.imprimeComMarcadores()
+    listaDeLivros.sortedBy { it.autor }.imprimeComMarcadores()
 
-    livros
+    listaDeLivros
         .filter { it.autor.startsWith("J") }
         .sortedBy { it.anoPublicacao }
         .imprimeComMarcadores()
 
-    livros
+    listaDeLivros
         .filter { it.titulo.contains("vida") }
         .sortedBy { it.autor }
         .imprimeComMarcadores()
 
-    val titulos = livros
+    val titulos = listaDeLivros
         .filter { it.anoPublicacao > 1900 }
         .sortedBy { it.titulo }
         .map { it.titulo }
