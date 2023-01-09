@@ -12,5 +12,5 @@ fun main() {
     assistiramAmbos.add("Ana")
     assistiramAmbos.add("Ana")
 
-    println(assistiramAmbos.distinct())
+    println(assistiramAmbos)
 }
