@@ -2,14 +2,15 @@ package br.com.alura
 
 fun main() {
 
-    val assistiramCursoAndroid = listOf("Alex", "Fran", "Gui", "Maria")
-    val assistiramCursoKotlin = listOf("Alex", "Paulo", "Maria")
+    val assistiramCursoAndroid: Set<String> = setOf("Alex", "Fran", "Gui", "Maria")
+    val assistiramCursoKotlin: Set<String> = setOf("Alex", "Paulo", "Maria")
 
-    val assistiramAmbos = assistiramCursoAndroid + assistiramCursoKotlin
+    val assistiramAmbos = mutableSetOf<String>()
+    assistiramAmbos.addAll(assistiramCursoAndroid)
+    assistiramAmbos.addAll(assistiramCursoKotlin)
 
-//    val assistiramAmbos = mutableListOf<String>()
-//    assistiramAmbos.addAll(assistiramCursoAndroid)
-//    assistiramAmbos.addAll(assistiramCursoKotlin)
+    assistiramAmbos.add("Ana")
+    assistiramAmbos.add("Ana")
 
     println(assistiramAmbos.distinct())
 }
