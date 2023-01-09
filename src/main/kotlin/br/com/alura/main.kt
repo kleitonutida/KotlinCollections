@@ -2,39 +2,14 @@ package br.com.alura
 
 fun main() {
 
-    val banco: BancoDeNomes = BancoDeNomes()
+    val assistiramCursoAndroid = listOf("Alex", "Fran", "Gui", "Maria")
+    val assistiramCursoKotlin = listOf("Alex", "Paulo", "Maria")
 
-    val nomesSalvos: Collection<String> = banco.nomes
+    val assistiramAmbos = assistiramCursoAndroid + assistiramCursoKotlin
 
-    banco.salva("Alex")
-    println(nomesSalvos)
-    println(BancoDeNomes().nomes)
-}
+//    val assistiramAmbos = mutableListOf<String>()
+//    assistiramAmbos.addAll(assistiramCursoAndroid)
+//    assistiramAmbos.addAll(assistiramCursoKotlin)
 
-class BancoDeNomes() {
-    val nomes: Collection<String> get() = dados.toList()
-
-    fun salva(nome: String) {
-        dados.add(nome)
-    }
-
-    companion object {
-        private val dados = mutableListOf<String>()
-    }
-}
-
-fun testaColecao() {
-    val nomes: Collection<String> = mutableListOf("Alex",
-            "Fran",
-            "Gui",
-            "Maria",
-            "Ana")
-    println(nomes)
-
-    for (nome in nomes.iterator()) {
-        println(nome)
-    }
-
-    println("Tem o nome Alex? ${nomes.contains("Alex")}")
-    println("Tamanho da coleção: ${nomes.size}")
+    println(assistiramAmbos.distinct())
 }
