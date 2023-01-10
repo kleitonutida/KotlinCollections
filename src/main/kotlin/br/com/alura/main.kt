@@ -64,6 +64,41 @@ fun main() {
     // Filtrar pelas chaves
     val pedidosPorNumero = pedidos.filterKeys { numero -> numero % 2 == 1 }
     println(pedidosPorNumero)
+
+    println(pedidos)
+
+    // Utilizando o operador +
+    println(pedidos + Pair(9, 15.0))
+    println(pedidos + mapOf(9 to 20.0, 1 to 25.0))
+    println(pedidos)
+
+    // Utilizando o operador -
+    println(pedidos - 6)
+    println(pedidos - listOf(6, 5, 10))
+    println(pedidos)
+
+    pedidos += listOf(9 to 20.0, 1 to 25.0)
+    pedidos += setOf(9 to 30.0, 10 to 25.0)
+//    pedidos.putAll(listOf(9 to 20.0, 1 to 25.0))
+//    pedidos.putAll(setOf(9 to 30.0, 10 to 25.0))
+    println(pedidos)
+
+//   pedidos += Pair(11, 100.0)
+   pedidos += 11 to 100.0
+//    pedidos.put(11, 300.0)
+    println(pedidos)
+
+    pedidos.keys.remove(1)
+    println(pedidos)
+
+    pedidos.values.remove(200.0)
+    println(pedidos)
+
+    pedidos.values.remove(100.0)
+    println(pedidos)
+
+    pedidos -= 9
+    println(pedidos)
 }
 
 fun testaMap(pedidos: MutableMap<Int, Double>) {
